@@ -25,10 +25,8 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      # Build with the base path set to the repository name so assets resolve
-      # at https://<user>.github.io/<repo>/. For a user/custom-domain site,
-      # change this to BASE_PATH=/
-      - run: BASE_PATH="/${GITHUB_REPOSITORY#*/}/" npm run build
+      # Served from the root of the custom domain (majal.website), so base is '/'.
+      - run: BASE_PATH=/ npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

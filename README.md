@@ -41,15 +41,19 @@ npm run preview    # معاينة نسخة الإنتاج
 2. من **Settings → Pages → Build and deployment**، اختر **GitHub Actions**.
 3. كل دفعة إلى `main` تبني وتنشر الموقع تلقائيًا عبر `.github/workflows/deploy.yml`.
 
-### مسار الموقع (base path)
+### النطاق المخصص (Custom domain)
 
-- **مستودع مشروع** (`username.github.io/majal`): يضبط سير العمل المسار تلقائيًا
-  إلى اسم المستودع. للبناء المحلي بنفس المسار:
-  ```bash
-  BASE_PATH=/majal/ npm run build
-  ```
-- **موقع مستخدم/نطاق مخصص** (مثل `majal.website`): اضبط `BASE_PATH=/` وعدّل
-  قيمة `base` في `vite.config.js`، وأضف ملف `CNAME` إن استخدمت نطاقًا مخصصًا.
+الموقع يُخدَّم من جذر النطاق المخصص **majal.website**:
+
+- ملف `public/CNAME` يحتوي على النطاق ويُنسخ تلقائيًا إلى مخرجات البناء.
+- مسار البناء (`base`) مضبوط على `/` في `vite.config.js` وسير العمل.
+- إعدادات DNS لدى مزوّد النطاق (Namecheap):
+  - سجلات **A** للنطاق الجذر `@` تشير إلى عناوين GitHub Pages:
+    `185.199.108.153` · `185.199.109.153` · `185.199.110.153` · `185.199.111.153`
+  - (اختياري) سجل **CNAME** لـ `www` يشير إلى `obaididev.github.io`
+
+> لو رجعت لاحقًا إلى مسار فرعي (`username.github.io/repo`)، ابنِ بـ
+> `BASE_PATH=/repo/ npm run build` واحذف ملف `CNAME`.
 
 ## الهوية البصرية
 
