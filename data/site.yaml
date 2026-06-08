@@ -1,0 +1,25 @@
+# Core site / brand information for Majal Initiative.
+name: مجال
+nameEn: MAJAL
+tagline: نفتح لك آفاق التقنية
+taglineEn: Unlocking your tech horizons
+intro: >
+  مبادرة شبابية تقنية تساعد طلاب الثانوي والجامعات على اكتشاف مجالهم التقني
+  المناسب لهم من خلال التجربة العملية، وتمكينهم من تطوير مهاراتهم مبكرًا
+  ليتميّزوا في سوق العمل الرقمي.
+# Public links — update these if any value changes.
+links:
+  website: https://majal.website
+  linktree: https://linktr.ee/majal_initiative
+  instagram: https://instagram.com/majal01_
+  email: Contactmajal01@gmail.com
+# Top navigation (anchors to section ids).
+nav:
+  - { id: about, label: عن مجال }
+  - { id: goals, label: أهدافنا }
+  - { id: impact, label: الأثر }
+  - { id: programs, label: البرامج }
+  - { id: voices, label: آراء المستفيدين }
+cta:
+  label: انضمّ إلينا
+  href: https://linktr.ee/majal_initiative

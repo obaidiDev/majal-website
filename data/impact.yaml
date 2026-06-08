@@ -1,0 +1,35 @@
+# Effectiveness / impact metrics. Survey aggregates computed from the raw
+# survey files in /source-data (see README for the breakdown).
+headline:
+  - { value: "+300", label: مستفيد خلال آخر ١٢ شهرًا }
+  - { value: "7", label: برامج وورش مُنفّذة }
+  - { value: "6", label: مجالات تقنية مُغطّاة }
+  - { value: "200", label: مقعد تدريبي حضوري }
+
+decision:
+  title: أثر أسبوع واحد على قرار الطالب
+  note: بناءً على ١١٦ استجابة من المستفيدين في البرنامج الصيفي ٢٠٢٥.
+  summary: >
+    ‏٥٨٪ من المشاركين توصّلوا إلى قرارٍ واضح حول مدى مناسبة المجال لهم بعد أسبوعٍ
+    واحد فقط — وهذا جوهر رسالة مجال: أن يقرّر الطالب عن تجربة، لا عن حيرة.
+  segments:
+    - { label: حسم أنه مجاله المناسب, value: 39, color: teal }
+    - { label: اكتشف أنه لا يناسبه, value: 19, color: navy }
+    - { label: ما زال يستكشف, value: 42, color: gray }
+
+# Per-field results from the post-program surveys.
+# helped = متوسط تقييم "ساعدتني مجال على تحديد ما إذا كان المجال يناسبني" (من ٥)
+# decidedPct = نسبة من حسموا قرارهم (يناسبني / لا يناسبني)
+fields:
+  - { name: الأمن السيبراني, responses: 26, helped: 4.5, decidedPct: 65 }
+  - { name: الذكاء الاصطناعي, responses: 27, helped: 4.4, decidedPct: 70 }
+  - { name: علم البيانات, responses: 23, helped: 4.5, decidedPct: 61 }
+  - { name: تطوير المواقع, responses: 40, helped: 4.0, decidedPct: 43 }
+
+highlights:
+  - value: "100%"
+    label: من مستفيدي الأمن السيبراني أكّدوا أن مجال ساعدتهم على تحديد مدى مناسبة المجال لهم.
+  - value: "4.8 / 5"
+    label: متوسط تقييم الورش العملية (الحوسبة الكمية، التقاط العلم، الذكاء الاصطناعي التوكيلي).
+  - value: "4.3 / 5"
+    label: متوسط تقييم المستفيدين لمدى مساعدة البرنامج الصيفي في حسم قرارهم.
